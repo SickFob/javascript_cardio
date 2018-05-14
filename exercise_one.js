@@ -6,8 +6,6 @@ function reverseString(str) {
   return strArray.reverse().join('');
 }
 
-
-
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
@@ -22,8 +20,6 @@ function isPalindrome(str) {
   }
 }
 
-
-
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
@@ -34,8 +30,6 @@ function reverseInt(int) {
   return parseInt(num) * Math.sign(int);
 }
 
-
-
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
@@ -45,8 +39,6 @@ function capitalizeLetters(str) {
             .map(word => word[0].toUpperCase() + word.substr(1))
             .join(' ');
 }
-
-
 
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
@@ -73,14 +65,26 @@ function maxCharacter(str) {
   return `${maxChar} => ${maxNum}`;
 }
 
-
-
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100. 
 // For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". 
 // For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 function fizzBuzz() {
-  //in progress
+    //in progress
+    for (let index = 1; index <= 100; index++) {
+      printChar = "";
+      if(index % 3 != 0 && index % 5 != 0) {
+        printChar = index;
+      } else {
+        if(index % 3 == 0) {
+          printChar = "Fizz";
+        }
+        if(index % 5 == 0) {
+          printChar = printChar+"Buzz";
+        }
+      }
+      console.log(printChar);
+    }
 }
 
 
@@ -106,7 +110,7 @@ const maxChar = maxCharacter('javascript');
 console.log('Max character: ');
 console.log(maxChar);
 console.log('************************************');
-
+fizzBuzz();
 
  
 
